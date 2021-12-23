@@ -6,10 +6,12 @@ import Sidebar from './Sidebar'
 import Walletbalance from './Walletbalance'
 
 function Content() {
+    
     return (
         <div className='content'>
-            <Sidebar/>
+        
     <Contentright/>
+    <Sidebar/>
     
         </div>
         

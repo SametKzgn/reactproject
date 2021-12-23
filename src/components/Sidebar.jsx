@@ -8,7 +8,7 @@ function Sidebar() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        console.log("veri alınıyor");
+        console.log("veri alinisyor");
         fetch("https://601d848abe5f340017a19c29.mockapi.io/dashboard").then(res => {
             res.json().then((data) => setPosts(data.user));/* data.user dedık cunku user ana baslık */
 
@@ -25,7 +25,7 @@ function Sidebar() {
     })
 
     return (
-        <div className="side-bar">
+        <div className="side-bar active">
             <div className="flex-container"> <img className="img" src="https://i.ibb.co/swkR93p/bramdejager-600x600.png" />
                 <div className="flex-container2"> <h4>{posts && posts.name}</h4>
                     <div className="id"> <h4>{posts.id && posts.id.title}:</h4>

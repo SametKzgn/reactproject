@@ -20,24 +20,33 @@ border: none;
 position: absolute;
     display: flex;
     flex-direction: column;
-    width: 8rem;
     background-color: #8e66db;
-    width: 300px;
-    height: 190px;
-     
+    width: 390px;
+     top: 0;
+     left: -999px ; /* basıldıgında sıde bar ı soldan içeriye sokan css komutu */
+     transition: 700ms; /* side bar in geliş süresi */
 }
+.side-bar.active{
+
+    left: 0px; /* side bar actıve oldguunda sıde bar ı eskı halıne yanı gorunur hale getırır */
+}
+
 .content{
     position: relative;
+
 }
 
 .contentright{
-    margin-left: 20rem;
+transition: all 0.5s ease-in-out; /* animasyon, geçiş yaptırıyor */
+    margin-left: 24rem; /*  side bar açıldıgında soldan bosluk vererek sıde barın yanına getırıyor içerikleri */
  flex-direction: column;
- 
     display: flex;
     justify-content: flex-end; 
 }
+.contentright.active{ /* aktive oldugunda içeriği ortalıyor */
+    margin: 0 5rem;
 
+}
 
 .flex-container img{
 width: 35%;
@@ -76,6 +85,7 @@ flex-direction: column;
 }
 .menü-container h4{
 padding: 37px;
+height: 123px;
 }
 .profile-class{
     display: flex;
@@ -204,7 +214,7 @@ font-size: 1rem;
     margin-top: 50px;
      background-color: white; 
     border-radius: 15px;
-    height: 130px;
+    height: 170px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -229,13 +239,14 @@ flex-direction: column;
     display: flex;
 }
 .cake-card{
-    padding: 3rem;
+    padding: 2.5rem;
      margin-top: 50px;
-        height: 400px;
+        height: 390px;
         width: 100%;
         
-        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);         
+        box-shadow:4px 4px 10px gray inset ;         
 }
+
 
 .cake1{
    
@@ -279,7 +290,7 @@ width: 20px;
 height: 50px;    
 }
 .cake2{
-   
+    
     color: #2d2d2d;
     align-items: center;
     display: flex;
@@ -290,7 +301,7 @@ height: 50px;
 }
 
 .cake2 img{
-   
+    max-height: 140.95px;
     width: 15%;
     border-radius:  15px 0 0 15px ;
 }
@@ -303,9 +314,62 @@ height: 50px;
 
 
 .txt-icon{
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-         
-    font-size: 2rem;
+    gap: 10px;
+    justify-content:space-between;
+    min-width: calc(100% / 5);
+   
+}
+.buttons{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  width: 80%;
+  position: absolute;
+
+}
+
+.txt-icon span{
+    font-size: 2.2rem;
+   
+   
+}
+.txt-icon p{
+font-size: 1.2rem;
+margin-bottom: 0% !important;
+}
+
+.icons-class{
+    overflow: hidden; /* slider için taşanları gizliyor  */
+    width: 100%;
+max-width: 80%;
+position: relative;
+
+}
+
+.icons-class button{
+background-color: white;
+color: #3814b4;
+border: 0;
+font-size: 2rem;
+    position:absolute;
+    top: 0;
+    bottom: 0;
+ 
+}
+.icons-class button svg{
+
+    display: block;
+
+}
+.left {
+    left: 20px;
+}
+.right{
+    right:  20px; 
+
+
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Lastcards() {
     return (
-        <div className="cake-card">
+        <div className="cake-card active">
 
             <div className='cake1'>
               <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2021%2F05%2F19%2Fycct-one-bowl-chocolate-cake-photo-by-allrecipes-1-2000.jpg" alt="" />                <h4>Chocolate Cake</h4>
